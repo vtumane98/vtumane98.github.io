@@ -1,0 +1,387 @@
+@import url(normalize.css);
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url("fonts/BebasNeueRegular.eot");
+  src: url("fonts/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("fonts/BebasNeueRegular.woff") format("woff"), url("fonts/BebasNeueRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url("fonts/BebasNeueBold.eot");
+  src: url("fonts/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("fonts/BebasNeueBold.woff") format("woff"), url("fonts/BebasNeueBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria Light';
+  src: url("fonts/Geometria-Light.eot");
+  src: url("fonts/Geometria-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria-Light.woff") format("woff"), url("fonts/Geometria-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria Regular';
+  src: url("fonts/Geometria.eot");
+  src: url("fonts/Geometria.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria.woff") format("woff"), url("fonts/Geometria.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria Italic';
+  src: url("fonts/Geometria-Italic.eot");
+  src: url("fonts/Geometria-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria-Italic.woff") format("woff"), url("fonts/Geometria-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria Medium';
+  src: url("fonts/Geometria-Medium.eot");
+  src: url("fonts/Geometria-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria-Medium.woff") format("woff"), url("fonts/Geometria-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria Bold';
+  src: url("fonts/Geometria-Bold.eot");
+  src: url("fonts/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Geometria-Bold.woff") format("woff"), url("fonts/Geometria-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  font-family: 'Geometria Regular';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #000;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body * {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+b {
+  font-family: 'Geometria Bold';
+  font-weight: 400;
+  font-style: normal;
+}
+
+i {
+  font-family: 'Geometria Italic';
+  font-weight: 400;
+  font-style: normal;
+}
+
+input, button, textarea {
+  font-family: 'Geometria Regular';
+  font-weight: 400;
+  font-style: normal;
+}
+
+input[type="text"], textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input[type="text"]::-ms-clear, textarea::-ms-clear {
+  display: none;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+button:active, button:focus {
+  outline: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.ov-hidden {
+  overflow: hidden !important;
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.row {
+  width: calc(100% + 30px);
+  margin-left: -15px;
+}
+
+.col {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.cover-img {
+  display: none;
+}
+
+.fullpage-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  color: #fff;
+  background-color: transparent;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.header.dark .header__item {
+  color: #000;
+}
+
+.header.dark .header__btn {
+  color: #000;
+}
+
+.header.dark .header__btn:hover {
+  color: #fff;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  width: 120px;
+}
+
+.header__logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__item {
+  margin-left: 34px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: 'Bebas Neue Bold';
+  font-weight: 400;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__item:first-child {
+  margin-left: 0;
+}
+
+.header__item a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  overflow: hidden;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}
+
+.header__item a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  margin-left: -1px;
+  -webkit-transition: background-color .4s, -webkit-transform .4s;
+  transition: background-color .4s, -webkit-transform .4s;
+  transition: transform .4s, background-color .4s;
+  transition: transform .4s, background-color .4s, -webkit-transform .4s;
+}
+
+.header__item a:hover {
+  color: #D7B46A;
+}
+
+.header__item a:hover::before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background-color: #D7B46A;
+  margin-left: 0;
+}
+
+.header__btn {
+  display: block;
+  margin-left: 60px;
+  font-family: 'Geometria Bold';
+  font-weight: 400;
+  font-style: normal;
+  height: 40px;
+  line-height: 37px;
+  width: 168px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border: 2px solid #D7B46A;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+  overflow: hidden;
+}
+
+.header__btn a {
+  display: block;
+}
+
+.header__btn::before, .header__btn::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  top: 0;
+  height: 100%;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+  background-color: #D7B46A;
+  z-index: -1;
+}
+
+.header__btn::before {
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.header__btn::after {
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.header__btn:hover {
+  color: #000;
+}
+
+.header__btn:hover::before, .header__btn:hover::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-section {
+  height: 100%;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.main-section__bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.main-section__bg::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.main-section__bg video {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
